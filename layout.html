@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <link href="layout.css" "type="text/css"rel="stylesheet"></link> 
+      </head> 
+    <body>
+        <div class="header">
+            <div class="logo">Logo</div>
+            <div class="center"></div>
+            <div class="list1">
+                <li><a href>Github</a></li>
+                <li><a href>Register</a></li>
+                <li><a href>Login</a></li>
+            </div>
+        </div>
+            <div class="banner" >
+                <!-- <input id="dec-number" type="number" placeholder="输入一个十进制非负整数">
+                <input id="bin-bit" type="number" placeholder="输入转化后二进制数字位数">
+                <button id="trans-btn" onclick="myfunction()">转化为二进制</button>
+                <p id="result">运算结果</p> -->
+                <!-- <button type="button" onclick="sedfunction()">关于3的小游戏</button> -->
+            <div class="list2">
+                <li class="li">1</li>
+                <li class="li">2</li>
+                <li class="li">3</li>
+                <li class="li">4</li>
+            </div>
+            </div>
+            <div class="content">
+                <div class="panelscenter">
+                <div class="panels">
+                    <li class="li2"><a href class="active">Home</a></li>
+                    <li class="li2"><a href>PROFILE</a></li>
+                    <li class="li2"><a href>ABOUT</a></li>
+                </div></div>
+                <div class="column">
+                    <li class="li4">This is Content 1</li>
+                    <li class="li4">MaybeContent 2</li>
+                    <li class="li4">
+                            <!-- <input id="dec-number" type="number" placeholder="输入一个十进制非负整数">
+                            <button id="trans-btn" onclick="myfunction( )">转化为二进制</button>
+                            <p id="result">运算结果</p> -->
+                           
+                           </li>
+                    <li class="li5">Content 4</li>
+                    <li class="li5">Content 5</li>
+                    <li class="li5">Content 6</li>
+                    <li class="li5">Content 7</li>
+                    <li class="li3">Content 8</li>
+                    <li class="li3">Content 9</li>
+                    <li class="li3">Content 10</li>
+                </div>
+            </div>
+            <div class="footer">2018 ife.baidu.com</div>
+            <div id="table">
+                <table  class="table" >
+                    <button onclick="trifunction()" style="background-color: beige;">九九乘法表</button>
+                </table>
+            </div>
+      <script>
+      function myfunction(decNumber) {
+        var para,i,j='',num,inp;
+        para=document.getElementById("dec-number").value;
+        if(para > 0){
+         for( para;para>0;){
+            i=para % 2;
+            para=parseInt(para/2); 
+            console.log("para:" + para);
+        console.log("i:" + i);   
+        j+=i.toString();
+          }
+          inp=document.getElementById("bin-bit").value;
+          if(j.length<inp){
+              num=inp-j.length;
+              for(var m=0;m<num;m++){
+                  j="0"+j;
+              }
+              console.log(  document.getElementById("result").innerHTML= "二进制为" + j);
+          }else{
+              console.log("小于二进制位数")
+          console.log(  document.getElementById("result").innerHTML= "二进制为" + j);
+          }}
+    else{
+            document.getElementById("result").innerHTML="不能小于0"
+          }
+         }
+          // 在这里实现你的转化方法，注意需要判断输入必须为一个非负整数
+      function sedfunction(){
+              for(var i=1;i<=100;i++){
+                  if(i==3||i%3==0){
+                      console.log("PA")
+                  }else{
+                      console.log(i);
+                  }
+              }
+          }
+     function trifunction(){
+         var form='';
+         for(var i=1;i<=9;i++)
+         for(var j=1;j<=i;j++){
+         {  if(i !==j){
+            form+='    '+i+"*"+j+"="+(i*j)+'  ';
+           }
+            else{
+                form+='     '+i+"*"+j+"="+(i*j)+' '+'<br/>';
+              
+                // console.log('\n')
+                // console.log(document.write(form +'<br/>'));
+            }document.getElementById("table").innerHTML= form 
+         } 
+        //  document.getElementById("table").innerHTML=;
+     } 
+      console.log(form)}
+     </script> 
+    </body>
+</html>
